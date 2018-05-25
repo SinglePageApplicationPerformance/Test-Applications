@@ -1,0 +1,1 @@
+Šīs testa lietotnes paredzētas, lai demonstrētu nejauša globālā mainīgā sekas. Accidental Global Variable lietotnē aizņemtās atmiņas daudzums būs lielāks, nekā Local Variable lietotnē.

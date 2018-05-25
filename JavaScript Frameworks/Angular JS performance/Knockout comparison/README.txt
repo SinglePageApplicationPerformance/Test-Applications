@@ -1,0 +1,1 @@
+Šī lietotne paredzēta, lai demonstrētu to, ka novērojamie objekti ļauj atjaunot vienu saraksta elementu konstantā laikā, uzsverot to, ka Angular JS ietvarā jāpievērš uzmanība vērotāju skaitam.

@@ -1,0 +1,1 @@
+Šī lietotne paredzēta tam, lai demonstrētu to, ka, palielinoties elementu skaitam, būtiski pieaug atmiņas apjoms salīdzinājumā ar Angular JS lietotni un Knockout JS one-time binding lietotni.

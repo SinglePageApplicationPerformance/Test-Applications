@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.min.js"></script>
+   <link rel="stylesheet" href="css/bootstrap.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <h2>Since the one time binding is static and doesn't dynamically update, the user interface for changing number of items was not implemented. Instead it should be done directly in code in index.js file.</h2>
+   <div class="media" data-bind="foreach: allItems">
+      <div class="row input-wrap">
+         <p data-bind="text: 'Id:' + id"></p>
+      </div>
+   </div>
+   <script src="js/index.js"></script>
+</body>
+</html>

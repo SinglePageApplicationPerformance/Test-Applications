@@ -1,0 +1,1 @@
+Šī lietotne paredzēta tam, lai demonstrētu to, ka, saraksta elementu skaitam pieaugot, palielinās laiks, kas aizņemts viena saraksta elementa izmainīšanai, jo palielinās vērotāju skaits.

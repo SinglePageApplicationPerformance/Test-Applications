@@ -1,0 +1,1 @@
+Šī lietotne paredzēta tam, lai parādītu, ka ar vienas reizes datu piesaisti netiek izveidoti vērotāji. Salīdzinot ar two-way binding lietotni, katrā reizē, kad ievades laukā tiek ievadīts kāds simbols, netīro datu pārbaude aizņem ievērojami mazāk laika, jo vērotāju ir mazāk.

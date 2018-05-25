@@ -1,0 +1,1 @@
+Šīs lietotnes demonstrē to, kā apjomīga objekta referencēšana kādā notikuma apstrādes funkcijā patur atmiņā visu referencēto objektu pat tad, ja izmantota tikai daļa no tā.

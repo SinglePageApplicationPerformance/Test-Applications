@@ -1,0 +1,1 @@
+Šīs testa lietotnes paredzētas apļveida references atmiņas noplūdes aktualitātei kādā konkrētā pārlūkprogrammā. Ja Circular Reference Global Variable parāda lielāku aizņemtās atmiņas daudzumu, nekā Circular Reference Local Variable, tad tas liecina par to, ka konkrētajā pārlūkprogrammā apļveida references nav problēma.

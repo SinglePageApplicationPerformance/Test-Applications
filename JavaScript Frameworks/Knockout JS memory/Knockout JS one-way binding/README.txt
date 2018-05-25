@@ -1,0 +1,1 @@
+Šī lietotne paredzēta tam, lai demonstrētu to, ka, palielinoties elementu skaitam, atmiņas apjoms pieaug ievērojami mazāk, nekā Knockout JS two-way binding lietotnē.

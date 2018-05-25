@@ -1,0 +1,1 @@
+Šī testa lietotne paredzēta, lai pārbaudītu šī scenāriju atmiņas noplūdes neeksistēšanu.
