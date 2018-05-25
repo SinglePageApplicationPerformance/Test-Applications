@@ -1,1 +1,1 @@
-Šī lietotne paredzēta, lai demonstrētu to, ka atmiņā paliek setInterval metodē izņemtās datu struktūras pat tad, ja setInterval vairs neveic nekādas darbības. Atmiņa tiek atbrīvota tikai brīdī, kad intervāls tiek noņemts.
+Šī lietotne paredzēta, lai demonstrētu to, ka atmiņā paliek setInterval metodē izmantotās datu struktūras pat tad, ja setInterval vairs neveic nekādas darbības. Atmiņa tiek atbrīvota tikai brīdī, kad intervāls tiek noņemts.
