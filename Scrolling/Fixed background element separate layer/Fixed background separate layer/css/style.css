@@ -4,27 +4,37 @@ html,body {
 }
 
 .fixedBackground {
-  
   align-items: center;
   display: flex;
   justify-content: center;
   min-height: 100%;
   position: relative;
-  background-size: cover;
-  background: url('../images/fixedbackground.jpg') no-repeat center top fixed;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-box-shadow:    inset 0 0 10px #000000;
-  -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow:         inset 0 0 10px #000000;
+}
+
+.fixedBackground::before{
+    background-image: url('../images/fixedbackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+	-moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+	content: '';
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	will-change: transform;
+	z-index: -1;
 }
 
 
 
 //styles for the scrollable items and other non-background-related elements
+
 li{
 	box-shadow: inset 1px 1px 0 hsla(0,0%,100%,.1);
+	list-style:none;
 }
 
 h1 {
