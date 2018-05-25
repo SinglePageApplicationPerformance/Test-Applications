@@ -1,0 +1,1 @@
+Šajā testa lietotnē tiek demonstrēts salīdzinājums starp lielapjoma datu apstrādi galvenajā pavedienā un šo datu sūtīšanu tīmekļa strādnim apstrādei.

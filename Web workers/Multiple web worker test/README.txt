@@ -1,0 +1,1 @@
+Šajā testa lietotnē tiek simulēti sarežģīti un laikietilpīgi aprēķini ar iespēju tos izdalīt vairākos pavedienos, novērtējot optimālāko variantu.
