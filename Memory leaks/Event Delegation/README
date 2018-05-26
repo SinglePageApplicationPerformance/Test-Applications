@@ -1,1 +1,4 @@
 Šīs testa lietotnes paredzētas, lai demonstrētu aizņemtās atmiņas apjomu gadījumā, kad tiek izmantota notikumu delegācija, un gadījumā, kad tā netiek izmantota.
+
+Izmantotie resursi:
+https://github.com/MakingDevelopers/EventDelegation
