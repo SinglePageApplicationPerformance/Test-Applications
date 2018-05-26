@@ -1,1 +1,3 @@
+BRĪDINĀJUMS: Tīmekļa strādņu testa lietotnes nestrādā, ja tās tiek palaistas no html faila. Lai tīmekļa strādņi darbotos, lietotnes nepieciešams palaist lokālā serverī.
+
 Šajā testa lietotnē tiek demonstrēts salīdzinājums starp lielapjoma datu apstrādi galvenajā pavedienā un šo datu sūtīšanu tīmekļa strādnim apstrādei.
