@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>DOM manipulation test</title>
+<link rel="stylesheet" href="bootstrap.css">
+
+<style>
+
+.captions {
+width: 12rem;
+display: inline-block;
+color: white;
+}
+
+ body {
+  background: #282828;
+}
+
+.post-property{
+margin-right:10px;
+float:left;
+}
+
+a{
+  color:#337ab7;
+   text-decoration: none;
+   font-weight:normal;
+   font-size:14px;
+}
+
+body > .container-fluid {
+  margin-top: 5%;
+}
+.body-container{
+  padding-right:100px;
+}
+.bottom-links{
+  width:100%;
+}
+.posts-list {
+  
+  overflow: hidden;
+}
+.post-heading{
+margin: 0px 0px 0px 0px;
+}
+
+.post-body{
+margin: 5px 10px 10px 0px;
+  font-size:14px;
+}
+.post-rating{
+margin: 5px 10px 10px 0px;
+  font-size:14px;
+  color:grey;
+}
+.input-wrap {
+  margin-bottom: 0.8em;
+}
+.row{
+  display:-webkit-box;
+    margin-left:5px;
+    margin-right:5px;
+}
+.media-list {
+  margin-top: 1.5em;
+}
+
+
+.media {
+    color:whitesmoke;
+  margin-top: 5px;
+ 
+  border-bottom: 1px solid #e1e8ed;
+  display:-webkit-box;
+}
+
+.media-object {
+  margin: 0px 15px 15px 0px;
+   border-radius: 50%;
+}
+
+.media:last-child {
+  border-bottom: none;
+}
+
+h2 input {
+  width: 2em;
+  text-align: center;
+}
+            .timeAgo{
+                font-size:14px;
+                    color: grey;
+            }
+</style>
+</head>
+<body>
+<script type="text/javascript">
+
+function runAppendChild() {
+var iterations = parseInt(document.getElementById('listElementCount').value);
+var div = document.createElement('div');
+document.body.appendChild(div);
+console.time("Div - appendChild " + iterations + "x");
+for (var i = 0; i < iterations; i++) {
+var divInputWrap = document.createElement('div');
+var divMedia = document.createElement('div');
+var divBodyContainer = document.createElement('div');
+var divRow = document.createElement('div');
+var divMediaBody = document.createElement('div');
+var h4PostHeading = document.createElement('h4');
+var spanName = document.createElement('span');
+var aNickName = document.createElement('a');
+var spanTimeAgo = document.createElement('span');
+var pPostBody = document.createElement('p');
+var pPostRating = document.createElement('p');
+var divRow2 = document.createElement('div');
+var divBottomLinks = document.createElement('div');
+var aPostPropertyExpand = document.createElement('a');
+var aPostPropertyReply = document.createElement('a');
+var aPostPropertyRepost = document.createElement('a');
+var aPostPropertyStar = document.createElement('a');
+var aPostPropertyMore = document.createElement('a');
+
+divInputWrap.appendChild(divMedia);
+divMedia.appendChild(divBodyContainer);
+divBodyContainer.appendChild(divRow);
+divBodyContainer.appendChild(divRow2);
+divRow.appendChild(divMediaBody);
+divMediaBody.appendChild(h4PostHeading);
+divMediaBody.appendChild(pPostBody);
+divMediaBody.appendChild(pPostRating);
+h4PostHeading.appendChild(spanName);
+h4PostHeading.appendChild(aNickName);
+h4PostHeading.appendChild(spanTimeAgo);
+divRow2.appendChild(divBottomLinks);
+divBottomLinks.appendChild(aPostPropertyExpand);
+divBottomLinks.appendChild(aPostPropertyReply);
+divBottomLinks.appendChild(aPostPropertyRepost);
+divBottomLinks.appendChild(aPostPropertyStar);
+divBottomLinks.appendChild(aPostPropertyMore);
+
+divInputWrap.className = 'row input-wrap';
+divMedia.className = 'media';
+divBodyContainer.className = 'body-container';
+divRow.className = 'row';
+divMediaBody.className = 'media-body';
+h4PostHeading.className = 'post-heading';
+pPostBody.className = 'post-body';
+pPostRating.className = 'post-rating';
+divRow2.className = 'row';
+divBottomLinks.className = 'bottom-links';
+aPostPropertyExpand.className = 'post-property';
+aPostPropertyMore.className = 'post-property';
+aPostPropertyReply.className = 'post-property';
+aPostPropertyRepost.className = 'post-property';
+aPostPropertyStar.className = 'post-property';
+
+spanName.innerText='Jake Smith ' + i;
+aNickName.innerText='@jsmith' + i;
+spanTimeAgo.innerText=i+' minutes ago';
+pPostBody.innerText='Lorem Ipsum has been the '+i+' industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+pPostRating.innerText='Rating: ' + i;
+aPostPropertyExpand.innerText='Expand';
+aPostPropertyMore.innerText='More';
+aPostPropertyReply.innerText='Reply';
+aPostPropertyRepost.innerText='Repost ('+i+')';
+aPostPropertyStar.innerText='Star ('+i+')';
+
+div.appendChild(divInputWrap);
+}
+console.timeEnd("Div - appendChild " + iterations + "x");
+}
+
+
+
+
+
+function runAppendDisplaynoneReflow() {
+var iterations = parseInt(document.getElementById('listElementCount').value);
+var div = document.createElement('div');
+div.setAttribute('id', 'testdiv');
+var h = 0;
+document.body.appendChild(div);
+div = document.getElementById('testdiv');
+div.style.display='none';
+for (var i = 0; i < iterations; i++) {
+var divInputWrap = document.createElement('div');
+var divMedia = document.createElement('div');
+var divBodyContainer = document.createElement('div');
+var divRow = document.createElement('div');
+var divMediaBody = document.createElement('div');
+var h4PostHeading = document.createElement('h4');
+var spanName = document.createElement('span');
+var aNickName = document.createElement('a');
+var spanTimeAgo = document.createElement('span');
+var pPostBody = document.createElement('p');
+var pPostRating = document.createElement('p');
+var divRow2 = document.createElement('div');
+var divBottomLinks = document.createElement('div');
+var aPostPropertyExpand = document.createElement('a');
+var aPostPropertyReply = document.createElement('a');
+var aPostPropertyRepost = document.createElement('a');
+var aPostPropertyStar = document.createElement('a');
+var aPostPropertyMore = document.createElement('a');
+
+divInputWrap.appendChild(divMedia);
+divMedia.appendChild(divBodyContainer);
+divBodyContainer.appendChild(divRow);
+divBodyContainer.appendChild(divRow2);
+divRow.appendChild(divMediaBody);
+divMediaBody.appendChild(h4PostHeading);
+divMediaBody.appendChild(pPostBody);
+divMediaBody.appendChild(pPostRating);
+h4PostHeading.appendChild(spanName);
+h4PostHeading.appendChild(aNickName);
+h4PostHeading.appendChild(spanTimeAgo);
+divRow2.appendChild(divBottomLinks);
+divBottomLinks.appendChild(aPostPropertyExpand);
+divBottomLinks.appendChild(aPostPropertyReply);
+divBottomLinks.appendChild(aPostPropertyRepost);
+divBottomLinks.appendChild(aPostPropertyStar);
+divBottomLinks.appendChild(aPostPropertyMore);
+
+divInputWrap.className = 'row input-wrap';
+divMedia.className = 'media';
+divBodyContainer.className = 'body-container';
+divRow.className = 'row';
+divMediaBody.className = 'media-body';
+h4PostHeading.className = 'post-heading';
+pPostBody.className = 'post-body';
+pPostRating.className = 'post-rating';
+divRow2.className = 'row';
+divBottomLinks.className = 'bottom-links';
+aPostPropertyExpand.className = 'post-property';
+aPostPropertyMore.className = 'post-property';
+aPostPropertyReply.className = 'post-property';
+aPostPropertyRepost.className = 'post-property';
+aPostPropertyStar.className = 'post-property';
+
+spanName.innerText='Jake Smith ' + i+'';
+aNickName.innerText='@jsmith' + i;
+spanTimeAgo.innerText=' '+i+' minutes ago';
+pPostBody.innerText='Lorem Ipsum has been the '+i+' industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+pPostRating.innerText='Rating: ' + i;
+aPostPropertyExpand.innerText='Expand';
+aPostPropertyMore.innerText='More';
+aPostPropertyReply.innerText='Reply';
+aPostPropertyRepost.innerText='Repost ('+i+')';
+aPostPropertyStar.innerText='Star ('+i+')';
+div.appendChild(divInputWrap);
+h=div.offsetHeight;
+}
+div.style.display='block';
+}
+
+function runAppendChildReflow() {
+var iterations = parseInt(document.getElementById('listElementCount').value);
+var div = document.createElement('div');
+var h=0;
+document.body.appendChild(div);
+console.time("Div - appendChild " + iterations + "x");
+for (var i = 0; i < iterations; i++) {
+var divInputWrap = document.createElement('div');
+var divMedia = document.createElement('div');
+var divBodyContainer = document.createElement('div');
+var divRow = document.createElement('div');
+var divMediaBody = document.createElement('div');
+var h4PostHeading = document.createElement('h4');
+var spanName = document.createElement('span');
+var aNickName = document.createElement('a');
+var spanTimeAgo = document.createElement('span');
+var pPostBody = document.createElement('p');
+var pPostRating = document.createElement('p');
+var divRow2 = document.createElement('div');
+var divBottomLinks = document.createElement('div');
+var aPostPropertyExpand = document.createElement('a');
+var aPostPropertyReply = document.createElement('a');
+var aPostPropertyRepost = document.createElement('a');
+var aPostPropertyStar = document.createElement('a');
+var aPostPropertyMore = document.createElement('a');
+
+divInputWrap.appendChild(divMedia);
+divMedia.appendChild(divBodyContainer);
+divBodyContainer.appendChild(divRow);
+divBodyContainer.appendChild(divRow2);
+divRow.appendChild(divMediaBody);
+divMediaBody.appendChild(h4PostHeading);
+divMediaBody.appendChild(pPostBody);
+divMediaBody.appendChild(pPostRating);
+h4PostHeading.appendChild(spanName);
+h4PostHeading.appendChild(aNickName);
+h4PostHeading.appendChild(spanTimeAgo);
+divRow2.appendChild(divBottomLinks);
+divBottomLinks.appendChild(aPostPropertyExpand);
+divBottomLinks.appendChild(aPostPropertyReply);
+divBottomLinks.appendChild(aPostPropertyRepost);
+divBottomLinks.appendChild(aPostPropertyStar);
+divBottomLinks.appendChild(aPostPropertyMore);
+
+divInputWrap.className = 'row input-wrap';
+divMedia.className = 'media';
+divBodyContainer.className = 'body-container';
+divRow.className = 'row';
+divMediaBody.className = 'media-body';
+h4PostHeading.className = 'post-heading';
+pPostBody.className = 'post-body';
+pPostRating.className = 'post-rating';
+divRow2.className = 'row';
+divBottomLinks.className = 'bottom-links';
+aPostPropertyExpand.className = 'post-property';
+aPostPropertyMore.className = 'post-property';
+aPostPropertyReply.className = 'post-property';
+aPostPropertyRepost.className = 'post-property';
+aPostPropertyStar.className = 'post-property';
+
+spanName.innerText='Jake Smith ' + i;
+aNickName.innerText='@jsmith' + i;
+spanTimeAgo.innerText=i+' minutes ago';
+pPostBody.innerText='Lorem Ipsum has been the '+i+' industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+pPostRating.innerText='Rating: ' + i;
+aPostPropertyExpand.innerText='Expand';
+aPostPropertyMore.innerText='More';
+aPostPropertyReply.innerText='Reply';
+aPostPropertyRepost.innerText='Repost ('+i+')';
+aPostPropertyStar.innerText='Star ('+i+')';
+
+div.appendChild(divInputWrap);
+h = div.offsetHeight;
+}
+console.timeEnd("Div - appendChild " + iterations + "x");
+}
+</script>
+<span class="captions">Enter the number of list items to generate</span><input id="listElementCount" type="number" step="100" /><br/>
+<hr/>
+
+
+
+<span class="captions">Append (appendChild) </span><button class="btn"
+onclick="runAppendChild()">Render</button>
+<br/><br/>
+<span class="captions">Append (with display:none) reflow </span><button class="btn"
+onclick="runAppendDisplaynoneReflow()">Render</button>
+<br/><br/>
+<span class="captions">Append (appendChild) reflow</span><button class="btn"
+onclick="runAppendChildReflow()">Render</button>
+<br/><br/>
+<div id="testDiv"></div>
+</body>
+</html>
