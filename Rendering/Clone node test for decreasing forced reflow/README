@@ -1,4 +1,4 @@
-Šīs testa lietotnes pārbauda iespēju novērst piespiedu izkārtošanas procesu, izmantojot elements klonēšanu. Twitter items rendering - div offsetHeight lietotnē iespējams pārbaudīt, ka nav iespējams iegūt ģeometriskos parametrus, jo elementi fiziski nav lietotāja saskarnes DOM. Twitter items rendering - input offsetHeight lietotne parāda, ka ir iespējams novērst piespiedu izkārtošanas procesu, kad ir jānolasa vērtība, kas nav atkarīga no ievietojamā satura.
+Šīs testa lietotnes pārbauda iespēju novērst piespiedu izkārtošanas procesu, izmantojot elementa klonēšanu. Twitter items rendering - div offsetHeight lietotnē iespējams pārbaudīt, ka nav iespējams iegūt ģeometriskos parametrus, jo elementi fiziski nav lietotāja saskarnes DOM. Twitter items rendering - input offsetHeight lietotne parāda, ka ir iespējams novērst piespiedu izkārtošanas procesu, kad ir jānolasa vērtība, kas nav atkarīga no ievietojamā satura.
 
 Izmantotie resursi:
 Romāns Kolduns, “Tīmekļa lietotņu klienta puses optimizācija”, Bakalaura darbs, Datorzinātņu fakultāte, Latvijas Universitāte, Rīga, Latvija, 2017. - Šīs lietotnes ir norādītajā bakalaura darbā veidota lietotne, bet papildinātas.
