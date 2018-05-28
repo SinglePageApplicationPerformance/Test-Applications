@@ -21,7 +21,6 @@ function removeOtherButton(){
 	}
 	document.getElementById('removeinterval').addEventListener("click", function () {
 		clearInterval(window.testinterval);
-		list.remove();
 	});
 	var leakExample=function(){
 		var posts = getData();
