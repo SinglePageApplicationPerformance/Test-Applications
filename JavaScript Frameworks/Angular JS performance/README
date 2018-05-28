@@ -1,0 +1,2 @@
+Šeit pieejamas lietotnes saistībā ar Angular JS veiktspēju. Knockout comparison lietotne demonstrē konstantu laiku viena elementa atjaunināšanai neatkarīgi no elementu skaita.
+Two-way binding lietotne parāda, ka pie liela skaita elementu laiks, kas patērēts viena elementa atjaunināšanai ir palielinājies, salīdzinot ar tādu pašu scenāriju One-way binding lietotnei. Neskatoties uz to, veiktspējas uzlabojums ir minimāls, un šīs problēmas izpētei būtu nepieciešams sarežģītāks scenārijs.
